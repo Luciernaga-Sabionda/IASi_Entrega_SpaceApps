@@ -257,9 +257,9 @@ El sistema está diseñado específicamente para:
 Este proyecto está bajo la Licencia MIT.
 
 ## 👥 Autores
-ROXANA ANDREA SALAZAR MARIN
-GREIMAR JOSE SALAZAR MARIN
-JHON ALEXANDRE MENESES OSPINA
+- ROXANA ANDREA SALAZAR MARIN,
+- GREIMAR JOSE SALAZAR MARIN,
+- JHON ALEXANDRE MENESES OSPINA,
 **IASi Team - SpaceApps NASA 2025**
 
 ## 🙏 Agradecimientos
