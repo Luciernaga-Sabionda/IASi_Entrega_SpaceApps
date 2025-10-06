@@ -257,11 +257,13 @@ El sistema está diseñado específicamente para:
 Este proyecto está bajo la Licencia MIT.
 
 ## 👥 Autores
-
+ROXANA ANDREA SALAZAR MARIN
+GREIMAR JOSE SALAZAR MARIN
+JHON ALEXANDRE MENESES OSPINA
 **IASi Team - SpaceApps NASA 2025**
 
 ## 🙏 Agradecimientos
-
+- Carolina Parada Veliz Directora de Magíster de la Univ. de Concepciòn, Chile
 - NASA SpaceApps Challenge 2025
 - Comunidad científica de monitoreo sísmico
 - Servicios geológicos de la región Andina
