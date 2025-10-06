@@ -1,0 +1,35 @@
+name: Deploy app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node (for future build steps)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Inject SERVER_BASE into app/index.html (if configured)
+        env:
+          SERVER_BASE: ${{ secrets.SERVER_BASE }}
+        run: |
+          if [ -n "$SERVER_BASE" ]; then
+            echo "Replacing __SERVER_BASE__ with $SERVER_BASE"
+            sed -i "s|__SERVER_BASE__|$SERVER_BASE|g" app/index.html
+          else
+            echo "No SERVER_BASE secret defined; leaving placeholder in place"
+          fi
+
+      - name: Deploy `app/` to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app
+          publish_branch: gh-pages

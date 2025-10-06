@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "AOI_Illapel_2015"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.2, -31.6]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IASi input schema",
+  "type": "object",
+  "required": ["meta","timeline","metrics"],
+  "properties": {
+    "meta": { "type": "object" },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date","IASi"],
+        "properties": {
+          "date": {"type":"string","format":"date"},
+          "IASi": {"type":"number"}
+        }
+      }
+    },
+    "metrics": {"type":"object"}
+  }
+}

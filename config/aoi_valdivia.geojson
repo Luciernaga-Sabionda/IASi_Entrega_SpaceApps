@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "AOI_Valdivia_1960"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.2, -39.8]
+      }
+    }
+  ]
+}
