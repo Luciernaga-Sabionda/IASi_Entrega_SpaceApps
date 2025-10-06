@@ -3,6 +3,11 @@ IASi_sync_and_push.ps1
 
 Usage: Run this script from the repository root in PowerShell:
   .\scripts\IASi_sync_and_push.ps1
+<#
+IASi_sync_and_push.ps1
+
+Usage: Run this script from the repository root in PowerShell:
+  .\scripts\IASi_sync_and_push.ps1
 
 What it does:
 - Verifies git is available
@@ -43,7 +48,8 @@ if (-not $origin){
 }
 
 Write-Host "Fetching origin..."
-git fetch origin || Abort "git fetch failed"
+$fetchOut = git fetch origin 2>&1
+if ($LASTEXITCODE -ne 0){ Abort "git fetch failed:`n$fetchOut" }
 
 Write-Host "Attempting rebase: git pull --rebase origin main"
 $pull = git pull --rebase origin main 2>&1
@@ -68,8 +74,8 @@ if ($LASTEXITCODE -eq 0){
 }
 
 Write-Host "Now pushing local main to origin..."
-git push -u origin main 2>&1
+$pushOut = git push -u origin main 2>&1
 if ($LASTEXITCODE -eq 0){ Write-Host "Push succeeded." -ForegroundColor Green }
-else { Write-Host "Push returned non-zero exit code. Check output above and ensure credentials (PAT) are correct." -ForegroundColor Red }
+else { Write-Host "Push returned non-zero exit code. Output:"; Write-Host $pushOut; Write-Host "Check output above and ensure credentials (PAT) are correct." -ForegroundColor Red }
 
 Write-Host "Done. If push failed due to auth, ensure you used your GitHub username and PAT when prompted." -ForegroundColor Cyan

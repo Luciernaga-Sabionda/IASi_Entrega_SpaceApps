@@ -1,5 +1,7 @@
 # IASi — Índice de Anomalía Sísmica inteligente
 
+_Nota: este proyecto utilizó herramientas de asistencia de IA para redacción y generación de material (ver `AI_NOTICE.md`). Todos los materiales multimedia incluyen la marca: "Generado con asistencia de IA"._
+
 IASi_Entrega_SpaceApps — Entrega SpaceApps NASA 2025
 
 Equipo: Los Abejorros Científicos

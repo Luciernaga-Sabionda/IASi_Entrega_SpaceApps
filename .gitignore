@@ -15,3 +15,9 @@ outputs/
 logs/
 .DS_Store
 IASi_release.zip
+*.log
+*.mp4
+*.pdf
+*.pptx
+*.sqlite
+scripts/*.log
