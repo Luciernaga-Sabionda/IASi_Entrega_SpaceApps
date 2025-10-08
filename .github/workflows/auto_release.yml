@@ -4,6 +4,11 @@ on:
   push:
     branches: [ main ]
 
+# Ensure the workflow has explicit permissions. This avoids 403 errors
+# when workflow steps later attempt to create releases or push tags.
+permissions:
+  contents: write
+
 jobs:
   build-and-package:
     runs-on: ubuntu-latest

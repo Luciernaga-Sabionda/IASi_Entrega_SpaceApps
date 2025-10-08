@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+# Grant the workflow explicit permissions so the built-in GITHUB_TOKEN
+# can push the published site into the gh-pages branch. Without this
+# permission some repositories deny write access to the token and you
+# get 403 from git (github-actions[bot]).
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
