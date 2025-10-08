@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "name": "TEST_EVENT",
+    "lat": null,
+    "lon": null,
+    "team": "IASi export script"
+  },
+  "timeline": [
+    {
+      "date": "2025-09-20",
+      "A": null,
+      "R": null,
+      "D": {
+        "mean_coh": 0.72,
+        "p95_defo_mm": 3.12
+      },
+      "M": null,
+      "S": null,
+      "IASi": null
+    },
+    {
+      "date": "2025-09-21",
+      "A": null,
+      "R": null,
+      "D": {
+        "mean_coh": 0.68,
+        "p95_defo_mm": 2.45
+      },
+      "M": null,
+      "S": null,
+      "IASi": null
+    },
+    {
+      "date": "2025-09-22",
+      "A": null,
+      "R": null,
+      "D": {
+        "mean_coh": 0.7,
+        "p95_defo_mm": 1.98
+      },
+      "M": null,
+      "S": null,
+      "IASi": null
+    },
+    {
+      "date": "2025-09-23",
+      "A": null,
+      "R": null,
+      "D": {
+        "mean_coh": 0.65,
+        "p95_defo_mm": 2.5
+      },
+      "M": null,
+      "S": null,
+      "IASi": null
+    }
+  ],
+  "metrics": {}
+}
