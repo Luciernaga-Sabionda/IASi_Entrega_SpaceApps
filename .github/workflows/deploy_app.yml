@@ -37,6 +37,11 @@ jobs:
       - name: Deploy `app/` to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Prefer a PAT stored as `DEPLOY_TOKEN` (if you need to bypass
+          # organization or repo restrictions). If not present, fall back
+          # to the built-in GITHUB_TOKEN.
+          # To use a PAT: create a repo secret named DEPLOY_TOKEN with a
+          # personal access token that has `repo` permissions.
+          github_token: ${{ secrets.DEPLOY_TOKEN || secrets.GITHUB_TOKEN }}
           publish_dir: ./app
           publish_branch: gh-pages
