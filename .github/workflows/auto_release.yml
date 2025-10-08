@@ -1,0 +1,31 @@
+name: Auto Release ZIP
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install requirements (if present)
+        run: |
+          if [ -f requirements.txt ]; then python -m pip install --upgrade pip && pip install -r requirements.txt || true; fi
+
+      - name: Make release ZIP
+        run: |
+          python scripts/iasi_make_release_zip.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IASi_release.zip
+          path: IASi_release.zip
